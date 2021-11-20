@@ -7,3 +7,7 @@ questionable, the features are only somewhat tested, and we are only using it
 on a single server.
 If you still want to use it: go ahead, but please be aware that I will not be
 responsible if it causes your computer or you to catch fire.
+
+# Contributors
+* **Adrian Steffan** - [adriansteffan](https://github.com/adriansteffan)
+* **Till Müller** - [TillMueller](https://github.com/TillMueller)
