@@ -29,7 +29,7 @@ BREAKOUT_ROOM_PREFIX = "Breakout"
 intents = discord.Intents.default()
 # Without this we can't see the members of channels
 intents.members = True
-bot = discord.ext.commands.Bot(command_prefix="!br", pm_help=True, intents=intents)
+bot = discord.ext.commands.Bot(command_prefix="!br ", pm_help=True, intents=intents)
 
 @bot.command(name="start")
 async def breakout(ctx, persons_per_room_str = None):
