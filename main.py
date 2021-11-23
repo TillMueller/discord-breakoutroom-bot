@@ -92,6 +92,7 @@ async def breakout(ctx, persons_per_room_str = None):
 
         print(f"Moving {user} to {crazy_channels[current_channel_index]['room']}")
         await user.move_to(crazy_channels[current_channel_index]["room"])
+        time.sleep(0.5)
         persons_moved += persons
         crazy_channels[current_channel_index]["persons_in_room"] += persons
         
@@ -128,6 +129,7 @@ async def breakin(ctx, seconds_str = None):
         for member in room.members:
             print(f"Moving {member} to {return_channel}")
             await member.move_to(return_channel)
+            time.sleep(0.5)
     print("Done moving people back!")
 
     del state[server_name][author_id]
@@ -175,8 +177,6 @@ async def store_members_for_user_id(ctx, num_str, user_id_str):
     user_storage["number_of_people"] = num
     save_storage()
     await ctx.send(f"Set {ctx.message.guild.get_member(int(user_id_str)).display_name} to {num} people :)")
-
-    
 
 def save_storage():
     print(f"Saving storage: {storage}")
